@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/checkout.css">
+    <title>Checkout - Makers Magic Marketplace</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">Handicraft</div>
+            <nav>
+                <a href="welcome.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="cart.html">Cart</a>
+                <a href="checkout.html">Checkout</a>
+            </nav>
+            <div class="account-info">
+                <a href="login.html">
+                    <span>👤</span>
+                </a>
+                <a href="/favorites">
+                    <span>💖</span>
+                </a>
+                <a href="/cart">
+                    <span>🛒</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="checkout-container">
+            <h1>Checkout</h1>
+
+            <form action="/process-transaction" method="POST">
+                <section class="order-summary">
+                    <h2>Order Summary</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Example product 1 -->
+                            <tr>
+                                <td>Vase</td>
+                                <td>$295.00</td>
+                                <td><input type="number" name="quantity_1" value="1" min="1" max="10"></td>
+                                <td>$295.00</td>
+                            </tr>
+                            <!-- Example product 2 -->
+                            <tr>
+                                <td>Kahoy</td>
+                                <td>$295.00</td>
+                                <td><input type="number" name="quantity_2" value="1" min="1" max="10"></td>
+                                <td>$295.00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3">Subtotal</td>
+                                <td>$590.00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Shipping</td>
+                                <td>$15.00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Total</td>
+                                <td>$605.00</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </section>
+
+                <section class="payment-method">
+                    <h2>Payment Method</h2>
+
+                    <!-- Radio button options for selecting payment method -->
+                    <label>
+                        <input type="radio" name="payment_method" value="credit_card" checked> Credit/Debit Card
+                    </label><br>
+
+                    <label>
+                        <input type="radio" name="payment_method" value="cash_on_delivery"> Cash on Delivery
+                    </label>
+
+                    <!-- If Credit Card is selected, show the following fields -->
+                    <div id="credit-card-details">
+                        <label for="credit-card">Credit/Debit Card</label>
+                        <input type="text" id="credit-card" name="credit_card" placeholder="XXXX-XXXX-XXXX-XXXX">
+
+                        <label for="expiry-date">Expiry Date</label>
+                        <input type="month" id="expiry-date" name="expiry_date">
+
+                        <label for="cvv">CVV</label>
+                        <input type="number" id="cvv" name="cvv" placeholder="XXX">
+                    </div>
+
+                </section>
+
+                <button type="submit" class="submit-order">Place Order</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 COSSO. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
