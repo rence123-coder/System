@@ -1,0 +1,95 @@
+/* Basic styling for the checkout page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.navbar .account-info a {
+    margin-left: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.checkout-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tfoot td {
+    font-weight: bold;
+}
+
+input[type="text"], input[type="tel"], input[type="number"], input[type="month"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #e60000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #c50000;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
